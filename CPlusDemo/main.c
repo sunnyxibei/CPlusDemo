@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "test.h"
 
 //#include 有以下两种写法，其中第一种适用于引用标准库函数，第二种用于引入自己定义的函数
 //#include <文件名>
@@ -74,7 +75,7 @@ int main(int argc, const char * argv[]) {
     //一维数组初始化的方式
     //全局数组若不初始化，默认初始化为零 局部l数组若不初始化，默认初始化为随机值
     
-    //demo 一维数组的反转
+//    demo 一维数组的反转
 //    int arr[] = { 1, -2, 3,- 4, 5, -6, 7, -8, -9, 10 };
 //    int length = sizeof(arr)/sizeof(arr[0]);
 //    printf("原始数组为:\n");
@@ -100,7 +101,9 @@ int main(int argc, const char * argv[]) {
 //    }
 //
 //    printf("arr = %p\n",arr);
-//
+    
+   // bubbleSort(&arr);
+
     
 //    //定义了一个二维数组，名字叫a
 //    //二维数组是本质上还是一维数组，此一维数组有3个元素
@@ -131,15 +134,53 @@ int main(int argc, const char * argv[]) {
 //
 //    printf("buf2 = %s\n", buf2);
     
-//    char * arr = "hello hahaha";
-//    printf("%s\n", arr);
-//    //使用string.h中的strlen获取字符串的长度
-//    //字符串的长度实际上是第一个ascii码0之前的字符的个数
-//    printf("%lu\n",strlen(arr));
+    char * arr = "abc\0defg";
+    printf("%s\n", arr);
+    //使用string.h中的strlen获取字符串的长度
+    //字符串的长度实际上是第一个ascii码0之前的字符的个数，注意strlen的长度不包含\0
+    printf("%lu\n",strlen(arr));
     
     long mill;
     time(&mill);
     printf("%ld\n",mill);
+    
+//    int a;
+//    int b;
+//    int c;
+// __asm用于执行汇编指令
+//    __asm
+//    {
+//        mov a, 3    //3的值放在a对应内存的位置
+//        mov b, 4    //4的值放在b对应内存的位置
+//        mov eax, a    //把a内存的值放在eax寄存器
+//        add eax, b    //eax和b相加，结果放在eax
+//        mov c, eax    //eax的值放在c中
+//    }
+//
+//    printf("%d\n",c);
+    
+    printRandom();
 
     return 0;
 }
+
+//void bubbleSort(int* arr[]){
+//    int i = 0;
+//    int j = 0;
+//    int length = sizeof(arr)/sizeof(arr[0]);
+//    int temp;
+//    for (i = 0; i < length - 1; i ++) {
+//        for (j = i; j < length - 1 - i; j ++) {
+//            if (arr[i] > arr[j]) {
+//                temp = arr[i];
+//                arr[i] = arr[j];
+//                arr[j] = temp;
+//            }
+//        }
+//    }
+//    for (i = 0; i < length; i ++) {
+//        printf("%d\n",&arr[i]);
+//    }
+//
+//}
+
