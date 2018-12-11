@@ -12,6 +12,7 @@
 #include <time.h>
 #include "test.h"
 
+
 //#include 有以下两种写法，其中第一种适用于引用标准库函数，第二种用于引入自己定义的函数
 //#include <文件名>
 //#include "文件名"
@@ -159,7 +160,10 @@ int main(int argc, const char * argv[]) {
 //
 //    printf("%d\n",c);
     
-    printRandom();
+   // printRandom();
+    testPointer();
+//    testPointerWithArray();
+//    testPointerOperator();
 
     return 0;
 }
