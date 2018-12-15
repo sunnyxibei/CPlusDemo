@@ -11,6 +11,8 @@
 #include <string.h>
 #include <time.h>
 #include "test.h"
+#include "operatordemo.h"
+#include "testarray.h"
 
 
 //#include 有以下两种写法，其中第一种适用于引用标准库函数，第二种用于引入自己定义的函数
@@ -18,7 +20,44 @@
 //#include "文件名"
 #define MAX 100
 
+void bubbleSort(int arr[] , int length);
+
 int main(int argc, const char * argv[]) {
+//    printf("测试冒泡排序\n");
+//    int arr[] = {2,3,1,21132,2,32,245,12};
+//    int length = sizeof(arr)/sizeof(arr[1]);
+//    bubbleSort(arr, length);
+    
+//    printf("测试指针运算\n");
+//    printf("第一个例子，字符串拷贝\n");
+//    char dst[100];
+//    strCopy("Hello World !",dst);
+//    printf("%s\n",dst);
+    
+    testArray();
+}
+
+//C语言实现冒泡排序
+//此处需要注意的是，数组作为参数传递给函数时，会弱化为指针，需要通过指针操作数组，同时无法获取数组原本的大小
+//数组作为函数会退化为指针，失去数组原先的精度（size）
+void bubbleSort(int arr[] , int length){
+    for (int i = 0 ; i < length - 1; i ++) {
+        for (int j = 0; j < length - 1 - i; j ++) {
+            if (arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    printf("排序完成后的数组:");
+    for (int x = 0; x < length; x ++) {
+        printf("%d, ",arr[x]);
+    }
+    printf("\n");
+}
+
+int main01(int argc, const char * argv[]) {
     printf("Hello, World!\n");
     //system函数用于执行一个shell命令，和shell窗口里面执行一致，可以通过分号分割多个命令
     system("git --version");

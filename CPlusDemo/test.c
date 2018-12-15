@@ -105,6 +105,7 @@ void testPointer(){
     int ske = 100;
     void * nothing = &ske;
     //把万能指针赋值给指定类型的指针，居然不需要强制类型转换
+    //但是在操作内存地址中的值的时候，必须强制类型转换成指定类型的指针
     int * intP = nothing;
     printf("nothing = %d\n",*((int * )nothing));
     printf("intP = %d\n",*intP);
