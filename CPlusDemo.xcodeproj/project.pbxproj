@@ -10,6 +10,7 @@
 		D72972F321BE49790010FDE3 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = D72972F221BE49790010FDE3 /* test.c */; };
 		D763841321C4C92A00544926 /* operatordemo.c in Sources */ = {isa = PBXBuildFile; fileRef = D763841221C4C92A00544926 /* operatordemo.c */; };
 		D763841621C4DA6800544926 /* testarray.c in Sources */ = {isa = PBXBuildFile; fileRef = D763841521C4DA6800544926 /* testarray.c */; };
+		D7CBC00D21C747FA0028ED36 /* teststring.c in Sources */ = {isa = PBXBuildFile; fileRef = D7CBC00C21C747FA0028ED36 /* teststring.c */; };
 		D7E863A22192D04D006114AA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D7E863A12192D04D006114AA /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		D763841221C4C92A00544926 /* operatordemo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = operatordemo.c; sourceTree = "<group>"; };
 		D763841421C4DA6800544926 /* testarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testarray.h; sourceTree = "<group>"; };
 		D763841521C4DA6800544926 /* testarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testarray.c; sourceTree = "<group>"; };
+		D7CBC00B21C747FA0028ED36 /* teststring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = teststring.h; sourceTree = "<group>"; };
+		D7CBC00C21C747FA0028ED36 /* teststring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = teststring.c; sourceTree = "<group>"; };
 		D7E8639E2192D04D006114AA /* CPlusDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPlusDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E863A12192D04D006114AA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +76,8 @@
 				D763841221C4C92A00544926 /* operatordemo.c */,
 				D763841421C4DA6800544926 /* testarray.h */,
 				D763841521C4DA6800544926 /* testarray.c */,
+				D7CBC00B21C747FA0028ED36 /* teststring.h */,
+				D7CBC00C21C747FA0028ED36 /* teststring.c */,
 			);
 			path = CPlusDemo;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CBC00D21C747FA0028ED36 /* teststring.c in Sources */,
 				D7E863A22192D04D006114AA /* main.c in Sources */,
 				D763841321C4C92A00544926 /* operatordemo.c in Sources */,
 				D72972F321BE49790010FDE3 /* test.c in Sources */,

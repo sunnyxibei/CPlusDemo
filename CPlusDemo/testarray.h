@@ -13,4 +13,6 @@
 
 void testArray();
 
+void findSecondNum();
+
 #endif /* testarray_h */

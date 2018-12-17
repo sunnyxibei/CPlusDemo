@@ -15,6 +15,8 @@ void removeSpaceViaPointer(char* src);
 
 void removeSpace(char* src, long length);
 
+void findSecondNum();
+
 void testArray() {
     
     int a[] = {1, 2, 3};
@@ -131,4 +133,72 @@ void removeSpace(char* src,long length){
     }
     src[j] = 0;
     printf("%s\n",src);
+}
+
+int findSecondMax(int arr[], int len);
+
+/*有个数组，找出第二大的数，并且打印出来（使用*操作数组元素个数，不要使用[])*/
+void findSecondNum(){
+    
+//    int a[] = {100,99,32,45,21,67,32,68,41,2,13,71};
+//    int a[] = {1,2,3,4,5,6,7,8,9,10,11,12};
+    int arr[] = {10,9,3,4,5,6,7};
+    int length = sizeof(arr)/sizeof(arr[1]);
+    
+    printf("第二大的数字是 ： %d\n",findSecondMax(arr,length));
+    
+    //定义三个指针，一个最大值，一个第二大，一个遍历的最前线
+//    int* first = a;
+//    int* second = a;
+//    int* front = a;
+//
+//    while (length --) {
+//        if (*front < *first) {
+//            second = first;
+//            first = front;
+//        }else if(*front < *second){
+//            second = front;
+//        }
+//        front++;
+//    }
+    //首先，第二小的secondNum的初始值，必须是int的最小值-32767，避免原始数字对逻辑判断的影响
+    int secondNum = -32767;
+    int* front = arr;
+    int* first = arr;
+    int* second = &secondNum;
+    //这里总的循环次数是length-1
+    while (--length) {
+        //首先做累加运算，从i=1的位置开始比较
+        front ++;
+        if (*front > *first) {
+            second = first;
+            first = front;
+        }else if(*front > *second){
+            second = front;
+        }
+    }
+    printf("second num is : %d\n",*second);
+    //同时，这里可以通过指针的偏移量获取第二大的数字的下标
+    int step = second - arr;
+    printf("second num location : %d\n",step);
+}
+
+int findSecondMax(int arr[], int len){
+    int sec_Max = -32767;
+    int Max = arr[0];
+    for (int i = 1; i < len; i++)
+    {
+        if (arr[i] > Max)
+        {
+            sec_Max = Max;
+            Max = arr[i];
+        }
+        else
+        {
+            if (arr[i] > sec_Max)
+                sec_Max = arr[i];
+        }
+    }
+    
+    return sec_Max;
 }

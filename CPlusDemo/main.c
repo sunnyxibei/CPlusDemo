@@ -13,6 +13,7 @@
 #include "test.h"
 #include "operatordemo.h"
 #include "testarray.h"
+#include "teststring.h"
 
 
 //#include 有以下两种写法，其中第一种适用于引用标准库函数，第二种用于引入自己定义的函数
@@ -34,7 +35,12 @@ int main(int argc, const char * argv[]) {
     //    strCopy("Hello World !",dst);
     //    printf("%s\n",dst);
     
-    testArray();
+    //testArray();
+//    char* dst = findString("hello,worldlle !", "lle");
+//    if (dst != NULL) {
+//       printf("findString : %s\n",dst);
+//    }
+    findSecondNum();
 }
 
 //C语言实现冒泡排序
